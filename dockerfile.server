@@ -1,0 +1,17 @@
+# Use an official GCC image
+FROM gcc:12
+
+# Set working directory
+WORKDIR /app
+
+# Copy source code
+COPY ./src /app/src
+COPY ./CMakeLists.txt /app/
+COPY ./data /app/data
+
+# Install cmake and build
+RUN apt-get update && apt-get install -y cmake && \
+    mkdir build && cd build && cmake .. && make
+
+# Optional (documented port)
+EXPOSE 1234

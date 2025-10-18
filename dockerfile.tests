@@ -1,0 +1,26 @@
+# Base image
+FROM gcc:11
+
+# Working directory inside container
+WORKDIR /app
+
+# Install necessary tools
+RUN apt-get update && \
+    apt-get install -y cmake git wget unzip && \
+    apt-get clean
+
+# Create data directory with write permissions
+RUN mkdir -p /app/data && chmod 777 /app/data
+
+# Copy all project files into the container
+COPY . .
+
+# Configure and build
+RUN cmake -S . -B build
+RUN cmake --build build
+
+# Set working directory to build
+WORKDIR /app/build
+
+# Run tests by default
+CMD ["ctest", "--output-on-failure"]

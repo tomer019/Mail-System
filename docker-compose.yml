@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: dockerfile.server
+    stdin_open: true
+    tty: true
+    networks:
+      - mailnet
+
+  client:
+    build:
+      context: .
+      dockerfile: dockerfile.client
+    stdin_open: true
+    tty: true
+    networks:
+      - mailnet
+
+  tests:
+    build:
+      context: .
+      dockerfile: dockerfile.tests
+    stdin_open: true
+    tty: true
+    networks:
+      - mailnet
+
+networks:
+  mailnet:
+    driver: bridge
