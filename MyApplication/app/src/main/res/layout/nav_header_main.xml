@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/nav_header_gradient"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FooMail"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user@example.com"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnCreateNewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="+ Create Label"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:background="@color/gmail_blue"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- Letter Avatar (default) -->
+        <TextView
+            android:id="@+id/tvProfileAvatar"
+            style="@style/GmailAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="U"
+            android:visibility="visible" />
+
+        <!-- Image Avatar (when uploaded) -->
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Profile Picture" />
+    </FrameLayout>
+
+</FrameLayout>

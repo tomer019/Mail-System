@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mail-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=maildb
+    networks:
+      - mail-network
+
+  blacklist-server:
+    build: 
+      context: ./cpp_server
+      dockerfile: dockerfile
+    container_name: mail-blacklist-server
+    restart: unless-stopped
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./cpp_server/data:/usr/src/app/data
+    networks:
+      - mail-network
+
+  mail-server:
+    build: 
+      context: ./node_server
+      dockerfile: dockerfile
+    container_name: mail-node-server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/maildb
+      - JWT_SECRET=dev_secret_change_me_in_production
+      - PORT=3000
+      - BLACKLIST_HOST=blacklist-server
+      - BLACKLIST_PORT=5555
+    depends_on:
+      - mongodb
+      - blacklist-server
+    volumes:
+      - ./node_server/uploads:/app/uploads
+    networks:
+      - mail-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  mail-network:
+    driver: bridge

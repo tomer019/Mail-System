@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- System Labels -->
+    <group android:id="@+id/group_system_labels">
+
+        <item
+            android:id="@+id/nav_inbox"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:iconTint="#5f6368"
+            android:title="Inbox" />
+
+        <item
+            android:id="@+id/nav_sent"
+            android:icon="@android:drawable/ic_menu_send"
+            android:iconTint="#5f6368"
+            android:title="Sent" />
+
+        <item
+            android:id="@+id/nav_drafts"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:iconTint="#5f6368"
+            android:title="Drafts" />
+
+        <item
+            android:id="@+id/nav_starred"
+            android:icon="@android:drawable/btn_star"
+            android:iconTint="#fbbc04"
+            android:title="Starred" />
+
+        <item
+            android:id="@+id/nav_spam"
+            android:icon="@android:drawable/ic_dialog_alert"
+            android:iconTint="#ea4335"
+            android:title="Spam" />
+
+        <item
+            android:id="@+id/nav_trash"
+            android:icon="@android:drawable/ic_menu_delete"
+            android:iconTint="#5f6368"
+            android:title="Trash" />
+
+    </group>
+
+    <!-- Divider -->
+    <item android:title="">
+        <menu>
+            <group android:id="@+id/group_divider">
+                <item
+                    android:id="@+id/divider_item"
+                    android:title=""
+                    android:enabled="false" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- Custom Labels -->
+    <group android:id="@+id/group_custom_labels">
+        <!-- Custom labels will be added here dynamically -->
+    </group>
+
+</menu>

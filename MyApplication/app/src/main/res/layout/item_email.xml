@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Avatar Container - Either Letter or Image -->
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp">
+
+        <!-- Letter Avatar (default) -->
+        <TextView
+            android:id="@+id/tvSenderAvatar"
+            style="@style/GmailAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="A"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <!-- Image Avatar (when available) -->
+        <ImageView
+            android:id="@+id/ivSenderAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Sender Avatar" />
+
+    </FrameLayout>
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Top Row: Sender + Time + Star -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:id="@+id/tvSender"
+                style="@style/GmailEmailSender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="sender@example.com" />
+
+            <ImageView
+                android:id="@+id/ivStar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/btn_star_big_off"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:tint="@color/gmail_text_hint"
+                android:contentDescription="Mark with star" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                style="@style/GmailEmailTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:34" />
+
+        </LinearLayout>
+
+        <!-- Subject Line -->
+        <TextView
+            android:id="@+id/tvSubject"
+            style="@style/GmailEmailSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Subject"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Preview Text -->
+        <TextView
+            android:id="@+id/tvPreview"
+            style="@style/GmailEmailPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email content preview..."
+            android:layout_marginBottom="4dp" />
+
+        <!-- Labels Row -->
+        <LinearLayout
+            android:id="@+id/layoutLabels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvLabels"
+                style="@style/GmailLabelChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Label" />
+
+        </LinearLayout>
+
+        <!-- Attachment/Important Indicators Row -->
+        <LinearLayout
+            android:id="@+id/layoutIndicators"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivAttachment"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_attachment"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Has attachment"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivImportant"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_important"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Important"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSpamIndicator"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@android:drawable/ic_dialog_alert"
+                android:tint="@color/gmail_red"
+                android:contentDescription="Spam"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Action Menu -->
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:layout_marginStart="8dp"
+        android:tint="@color/gmail_text_hint"
+        android:contentDescription="More options"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+html, body, #root { height: 100%; } /* Added by Meir for scrolling */
+body { overflow: hidden; } /* Added by Meir for scrolling */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+/* Add in exercises 4 - styles for the app layout*/
+.app-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #f1f3f4;
+  padding: 1rem;
+  flex-shrink: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 0; /* Changed by Meir for scrolling */
+  display: flex; /* changed by Meir for scrolling */
+  flex-direction: column; /* Added by Meir for scrolling */
+  background-color: #fff;
+  overflow: hidden; /* Changed by Meir for scrolling */
+}
+
+.route-scroll { /* Added by Meir for scrolling */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;         /* scrollable content */
+  padding: 1.5rem;        /* padding from parent*/
+}
+
+/*  Add in exercises 4 - styles for the sidebar links */
+.sidebar a {
+  display: block;
+  padding: 10px 12px;
+  color: #202124;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background-color: #d2e3fc;
+  color: #174ea6;
+}
+
+/*  Add in exercises 4 - styles for the mail list */
+.mail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mail-item {
+  cursor: pointer;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.mail-item:hover {
+  background-color: #f1f3f4;
+}
+
+.mail-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/*  Add in exercises 4 - styles for the mail view */
+.mail-view {
+  padding: 1rem;
+}
+
+.mail-view .mail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mail-view .mail-header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.mail-view .mail-content {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.mail-label {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.mail-content-area {
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
+}
+
+.label-title { 
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #202124;
+}
+
+.mail-subject { 
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+.mail-meta { 
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.mail-preview { 
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.mail-actions {
+  margin-top: 0.5rem;
+}
+
+.move-button { 
+  background-color: #e8f0fe;
+  color: #174ea6;
+  border: 1px solid #c6dafc;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.move-button:hover { 
+  background-color: #d2e3fc;
+
+}

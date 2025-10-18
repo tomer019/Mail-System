@@ -1,0 +1,199 @@
+<resources>
+    <string name="app_name">FooMail Application</string>
+
+    <!-- Navigation Menu Items -->
+    <string name="nav_inbox">Inbox</string>
+    <string name="nav_sent">Sent</string>
+    <string name="nav_drafts">Drafts</string>
+    <string name="nav_starred">Starred</string>
+    <string name="nav_spam">Spam</string>
+    <string name="nav_trash">Trash</string>
+    <string name="nav_personal_labels">Personal Labels</string>
+
+    <!-- Header Actions -->
+    <string name="create_new_label">Create New Label</string>
+    <string name="search_emails">Search Emails</string>
+    <string name="refresh">Refresh</string>
+    <string name="logout">Logout</string>
+    <string name="user_options">User Options</string>
+
+    <!-- Label Management -->
+    <string name="show_emails">Show Emails</string>
+    <string name="edit_label">Edit Label</string>
+    <string name="delete_label">Delete Label</string>
+    <string name="create_label_title">Create New Label</string>
+    <string name="edit_label_title">Edit Label</string>
+    <string name="label_name_hint">Label name</string>
+    <string name="create">Create</string>
+    <string name="update">Update</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+
+    <!-- Search -->
+    <string name="search_title">Search Emails</string>
+    <string name="search_hint">Enter search terms...</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="search_results">Search Results: %1$s</string>
+
+    <!-- Email Actions -->
+    <string name="compose_email">Compose Email</string>
+    <string name="refreshing">Refreshing...</string>
+    <string name="searching">Searching...</string>
+    <string name="star_added">Star added</string>
+    <string name="star_removed">Star removed</string>
+    <string name="moved_to_trash">Email moved to trash</string>
+    <string name="permanently_deleted">Email permanently deleted</string>
+
+    <!-- Confirmation Dialogs -->
+    <string name="delete_label_title">Delete Label</string>
+    <string name="delete_label_message">Are you sure you want to delete the label \'%1$s\'?\n\nThe label will be removed from all existing emails.</string>
+    <string name="permanent_delete_title">Permanent Delete</string>
+    <string name="permanent_delete_message">Are you sure you want to permanently delete this email?\nThis action cannot be undone!</string>
+    <string name="delete_permanently">Delete Permanently</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+
+    <!-- Success Messages -->
+    <string name="label_created">Label \'%1$s\' created successfully</string>
+    <string name="label_updated">Label updated to \'%1$s\'</string>
+    <string name="label_deleted">Label \'%1$s\' deleted successfully</string>
+    <string name="label_deleted_returning_inbox">Label deleted - returning to inbox</string>
+    <string name="logout_successful">Logout successful</string>
+    <string name="search_cleared">Search cleared</string>
+    <string name="draft_saved">Draft saved successfully</string>
+
+    <!-- Error Messages -->
+    <string name="error_label_name_required">Please enter a label name</string>
+    <string name="error_search_terms_required">Please enter search terms</string>
+    <string name="error_no_changes">No changes made</string>
+    <string name="error_server_connection">Server connection error: %1$s</string>
+    <string name="error_loading_labels">Failed to load labels: %1$d</string>
+    <string name="error_label_not_found">Label not found</string>
+    <string name="error_label_exists">Label with this name already exists</string>
+    <string name="error_no_permission">No permission to perform this action</string>
+    <string name="error_updating_label">Error updating label (code %1$d)</string>
+    <string name="error_deleting_label">Error deleting label (code %1$d)</string>
+    <string name="error_creating_label">Error creating label: %1$d</string>
+    <string name="error_moving_to_trash">Error moving email to trash</string>
+    <string name="error_deleting_email">Error deleting email</string>
+    <string name="error_updating_star">Error updating star</string>
+
+    <!-- Theme -->
+    <string name="theme_options">Theme Options</string>
+
+    <!-- Pagination -->
+    <string name="page_info">Page %1$d of %2$d</string>
+    <string name="next_page">Next</string>
+    <string name="previous_page">Previous</string>
+
+    <!-- General -->
+    <string name="loading">Loading...</string>
+    <string name="no_emails">No emails found</string>
+    <string name="email_detail">Email Details</string>
+
+    <!-- Login Activity -->
+    <string name="login_title">Login</string>
+    <string name="login_button">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="no_account_register">Don\'t have an account? Register here</string>
+    <string name="logging_in">Logging in...</string>
+    <string name="registration_completed">Registration completed successfully! Please login with your password</string>
+    <string name="login_successful">Login successful! Redirecting to inbox...</string>
+
+    <!-- Register Activity -->
+    <string name="register_title">Register</string>
+    <string name="register_button">Register</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="phone_hint">Phone (Optional)</string>
+    <string name="gender_hint">Gender (Optional)</string>
+    <string name="birth_date_hint">Birth Date (Optional)</string>
+    <string name="choose_profile_image">Choose Profile Image</string>
+    <string name="image_selected">Image Selected ✓</string>
+    <string name="loading_image">Loading image...</string>
+    <string name="already_have_account">Already have an account? Login here</string>
+    <string name="registering">Registering...</string>
+    <string name="registration_successful">Registration successful!\nWelcome %1$s!</string>
+
+    <!-- Gender options -->
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+
+    <!-- Registration validation messages -->
+    <string name="error_first_name_length">First name must contain at least 2 characters</string>
+    <string name="error_last_name_length">Last name must contain at least 2 characters</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_password_length">Password must contain at least 8 characters</string>
+    <string name="error_password_complexity">Password must contain both letters and numbers</string>
+    <string name="error_passwords_not_match">Passwords do not match</string>
+    <string name="error_invalid_gender">Please select valid gender (Male/Female/Other)</string>
+    <string name="error_invalid_date_format">Birth date must be in YYYY-MM-DD format</string>
+    <string name="error_unreasonable_birth_date">Birth date is not reasonable</string>
+    <string name="error_invalid_phone">Invalid phone number (example: 053-4302092 or +972534302092)</string>
+
+    <!-- Registration process messages -->
+    <string name="profile_image_selected">Profile image selected successfully</string>
+    <string name="error_reading_image">Error reading image</string>
+    <string name="error_processing_image">Error processing image: %1$s</string>
+    <string name="image_too_large">Image is too large (maximum 2MB)</string>
+    <string name="registration_failed">Registration failed: %1$s</string>
+    <string name="error_creating_request">Error creating request: %1$s</string>
+
+    <!-- Server error messages -->
+    <string name="error_invalid_registration_data">Invalid registration data</string>
+    <string name="error_user_already_exists">This user already exists in the system</string>
+    <string name="error_email_already_registered">This email address is already registered</string>
+    <string name="error_data_validation_failed">Data validation failed</string>
+    <string name="error_server_internal">Internal server error - please try again later</string>
+    <string name="error_registration_failed_code">Registration failed (error %1$d)</string>
+    <string name="error_registration_failed_retry">Registration failed - please try again</string>
+
+    <!-- MainActivity -->
+    <string name="gmail_application">Gmail Application</string>
+
+    <!-- ComposeActivity -->
+    <string name="compose_title">Compose Email</string>
+    <string name="to_hint">To</string>
+    <string name="subject_hint">Subject</string>
+    <string name="content_hint">Content</string>
+    <string name="send">Send</string>
+    <string name="save_draft">Save as Draft</string>
+    <string name="exit_without_saving">Exit without saving</string>
+    <string name="draft_not_saved">Draft not saved</string>
+    <string name="email_sent">Email sent successfully!</string>
+    <string name="sending_email">Sending email, please wait...</string>
+    <string name="enter_recipient">Please enter recipient address</string>
+    <string name="invalid_email">Invalid email address</string>
+    <string name="send_error_400">Invalid data - check recipient addresses</string>
+    <string name="send_error_403">No permission to send from this address</string>
+    <string name="send_error_500">Server error - please try again later</string>
+    <string name="send_failed">Email sending failed (code %1$d)</string>
+    <string name="connection_error">Connection error: %1$s</string>
+
+    <!-- EmailDetailActivity -->
+    <string name="from">From: %1$s</string>
+    <string name="to">To: %1$s</string>
+    <string name="no_subject">(No Subject)</string>
+    <string name="no_content">(No Content)</string>
+    <string name="unknown_time">Unknown time</string>
+    <string name="reply">Reply</string>
+    <string name="manage_labels">Manage Labels</string>
+    <string name="original_message_reply">--- Reply to original message ---</string>
+    <string name="labels_updated">Labels updated successfully</string>
+    <string name="cannot_manage_labels">Cannot manage labels - missing email ID</string>
+
+    <!-- ManageLabelsActivity -->
+    <string name="manage_labels_title">Manage Labels</string>
+    <string name="save">Save</string>
+    <string name="labels_load_error">Error loading labels: %1$d</string>
+    <string name="labels_update_error">Error updating labels: %1$d</string>
+
+    <!-- EmailAdapter -->
+    <string name="unknown_sender">Unknown</string>
+    <string name="draft_prefix">Draft: %1$s</string>
+    <string name="additional_labels">+%1$d</string>
+</resources>

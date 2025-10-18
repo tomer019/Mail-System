@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: gmail-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: gmail_app
+    volumes:
+      - mongodb_data:/data/db
+
+  # Node.js Backend Server
+  node-server:
+    build: .
+    container_name: gmail-node-server  
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - MONGO_URI=mongodb://mongodb:27017/gmail_app
+      - JWT_SECRET=your_super_secret_jwt_key_replace_in_production
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+volumes:
+  mongodb_data:

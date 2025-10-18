@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Gmail Primary Colors -->
+    <color name="gmail_red">#EA4335</color>
+    <color name="gmail_red_dark">#D33B2C</color>
+    <color name="gmail_red_light">#F28B82</color>
+
+    <color name="gmail_blue">#4285F4</color>
+    <color name="gmail_blue_dark">#3367D6</color>
+    <color name="gmail_blue_light">#8AB4F8</color>
+
+    <color name="gmail_green">#34A853</color>
+    <color name="gmail_green_dark">#2D7D42</color>
+    <color name="gmail_green_light">#81C995</color>
+
+    <color name="gmail_yellow">#FBBC04</color>
+    <color name="gmail_yellow_dark">#F9AB00</color>
+    <color name="gmail_yellow_light">#FDD663</color>
+
+    <color name="gmail_orange">#FF6F00</color>
+    <color name="gmail_purple">#9C27B0</color>
+
+    <!-- Gmail Background Colors -->
+    <color name="gmail_background_light">#F8F9FA</color>
+    <color name="gmail_background_white">#FFFFFF</color>
+    <color name="gmail_background_grey">#F5F5F5</color>
+
+    <!-- Gmail Text Colors -->
+    <color name="gmail_text_primary">#202124</color>
+    <color name="gmail_text_secondary">#5F6368</color>
+    <color name="gmail_text_hint">#9AA0A6</color>
+    <color name="gmail_text_disabled">#DADCE0</color>
+
+    <!-- Gmail Border and Divider Colors -->
+    <color name="gmail_divider">#DADCE0</color>
+    <color name="gmail_border">#E8EAED</color>
+    <color name="gmail_stroke">#DADCE0</color>
+
+    <!-- Gmail Card and Surface Colors -->
+    <color name="gmail_card_background">#FFFFFF</color>
+    <color name="gmail_surface">#F8F9FA</color>
+    <color name="gmail_surface_variant">#F1F3F4</color>
+
+    <!-- Gmail Status Colors -->
+    <color name="gmail_success">#34A853</color>
+    <color name="gmail_warning">#FBBC04</color>
+    <color name="gmail_error">#EA4335</color>
+    <color name="gmail_info">#4285F4</color>
+
+    <!-- Basic System Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Legacy Colors (for compatibility) -->
+    <color name="holo_red_light">#E90707</color>
+    <color name="darker_gray">#808080</color>
+
+    <!-- Gmail Light Theme Colors -->
+    <color name="gmail_primary">#1a73e8</color>
+    <!-- Gmail Search Bar Color -->
+    <color name="search_bar_background">#F1F3F4</color>
+
+</resources>

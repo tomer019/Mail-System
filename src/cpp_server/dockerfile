@@ -1,0 +1,23 @@
+FROM gcc:12
+
+WORKDIR /usr/src/app
+
+# Copy source files to src/ subdirectory (like your current structure)
+COPY . ./src/
+
+# Create data directory
+RUN mkdir -p ./data/
+
+# Build with the corrected paths
+RUN g++ -std=c++17 -pthread -o MailProject \
+  src/main.cpp \
+  src/TCP_Server.cpp \
+  src/BloomFilter.cpp \
+  src/bloom_setup.cpp \
+  src/UrlStorage.cpp \
+  src/UrlListUtils.cpp \
+  src/URLChecker.cpp \
+  src/InfiniteCommandLoop.cpp
+
+EXPOSE 5555
+CMD ["./MailProject", "0.0.0.0", "5555", "256", "8", "8"]

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base Application Theme -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/gmail_blue</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/gmail_red</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSurface">@color/gmail_background_white</item>
+        <item name="colorOnSurface">@color/gmail_text_primary</item>
+        <item name="android:colorBackground">@color/gmail_background_light</item>
+        <item name="android:statusBarColor">@color/gmail_background_white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/gmail_background_white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    AppTheme
+
+    <!-- Gmail Card Style -->
+    <style name="GmailCardStyle">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">1dp</item>
+        <item name="cardBackgroundColor">@color/gmail_background_white</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!-- Gmail Text Styles -->
+    <style name="GmailTextPrimary">
+        <item name="android:textColor">@color/gmail_text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="GmailTextSecondary">
+        <item name="android:textColor">@color/gmail_text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="GmailTextHint">
+        <item name="android:textColor">@color/gmail_text_hint</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Gmail Email Item Styles -->
+    <style name="GmailEmailSender" parent="GmailTextPrimary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="GmailEmailSubject" parent="GmailTextPrimary">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="GmailEmailPreview" parent="GmailTextSecondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="GmailEmailTime" parent="GmailTextHint">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Gmail Button Styles -->
+    <style name="GmailButtonPrimary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/gmail_blue</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="GmailButtonSecondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/gmail_blue</item>
+        <item name="android:textColor">@color/gmail_blue</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="GmailButtonDanger" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/gmail_red</item>
+        <item name="android:textColor">@color/gmail_red</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Gmail TextInput Styles -->
+    <style name="GmailTextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/gmail_blue</item>
+        <item name="hintTextColor">@color/gmail_text_secondary</item>
+        <item name="android:textColorHint">@color/gmail_text_hint</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+    <!-- Gmail Toolbar Style -->
+    <style name="GmailToolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/gmail_background_white</item>
+        <item name="titleTextColor">@color/gmail_text_primary</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Gmail FAB Style -->
+    <style name="GmailFAB" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/gmail_red</item>
+        <item name="tint">@android:color/white</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+    </style>
+
+    <!-- Gmail Navigation View Style -->
+    <style name="GmailNavigationView" parent="Widget.Material3.NavigationView">
+        <item name="android:background">@color/gmail_background_white</item>
+        <item name="itemTextColor">@color/gmail_text_primary</item>
+        <item name="itemIconTint">@color/gmail_text_secondary</item>
+    </style>
+
+    <!-- Gmail Label Chip Style -->
+    <style name="GmailLabelChip">
+        <item name="android:background">@drawable/label_background</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+    <!-- Gmail Avatar Style -->
+    <style name="GmailAvatar">
+        <item name="android:background">@drawable/circle_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+</resources>

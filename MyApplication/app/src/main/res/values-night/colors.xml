@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gmail Dark Theme Colors -->
+    <color name="gmail_primary">#4285f4</color>
+    <color name="gmail_background_light">#202124</color>
+    <color name="gmail_background_white">#303134</color>
+    <color name="gmail_surface_variant">#3c4043</color>
+    <color name="gmail_text_primary">#e8eaed</color>
+    <color name="gmail_text_secondary">#9aa0a6</color>
+    <color name="gmail_text_hint">#5f6368</color>
+    <color name="gmail_text_disabled">#5f6368</color>
+    <color name="gmail_divider">#3c4043</color>
+    <color name="gmail_blue">#4285f4</color>
+    <color name="gmail_blue_dark">#3367d6</color>
+    <color name="gmail_blue_light">#1e3a5f</color>
+    <color name="gmail_red">#f28b82</color>
+    <color name="gmail_red_dark">#d93025</color>
+    <color name="gmail_orange">#fcc934</color>
+    <color name="gmail_green">#81c995</color>
+
+</resources>

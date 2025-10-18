@@ -1,0 +1,194 @@
+.sidebar {
+  width: 220px;
+  background-color: #f1f3f4;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;  /* added by Meir - Independent scrolling */
+  overflow: auto; /* added by Meir - Independent scrolling */
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem; 
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #202124;
+  font-weight: 500;
+  display: block;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background-color: #e8f0fe;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+  color: #1a73e8;
+  background-color: #d2e3fc;
+}
+
+.new-label-form {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.new-label-form input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.new-label-form button {
+  width: 100%;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-label-form button:hover {
+  background-color: #1669c1;
+}
+
+.new-mail button {
+  width: 100%;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.new-mail button:hover {
+  background-color: #1669c1;
+}
+
+.new-mail button::before {
+  content: "\f4c9";
+  font-family: "Bootstrap Icons", "bootstrap-icons", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  position: relative;
+  top: 0.05em;
+}
+
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  position: relative;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle i {
+  font-size: 1rem; /* bi-three-dots-vertical */
+}
+
+.label-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  opacity: 0;
+  transform: scaleY(.96);
+  transform-origin: top right;
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.label-menu.open {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+.label-menu button {
+  width: 100%;
+  background: none;
+  border: 0;
+  text-align: left; 
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: .9rem;
+  color: #202124;
+}
+
+.label-menu button:hover {
+  background: #f5f7fb;
+}
+
+.label-row > a {
+  flex: 1;
+  margin-inline-end: .25rem;
+}
+
+.new-label-form {
+  display: grid;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+
+.new-label-form input {
+  width: 100%;
+  height: 36px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 0 .6rem;
+}
+
+.new-label-form button {
+  height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
