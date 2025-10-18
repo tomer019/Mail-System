@@ -1,0 +1,288 @@
+/* Additional CSS for Search Results - Add to App.css */
+
+/* Search result specific styling */
+.search-result-chip {
+  background: #e8f0fe !important;
+  color: #1a73e8 !important;
+  border: 1px solid #4285f4 !important;
+}
+
+.search-result-chip:hover {
+  background: #1a73e8 !important;
+  color: white !important;
+}
+
+/* Dark mode support for search result chip */
+:root[data-theme="dark"] .search-result-chip {
+  background: #1a2332 !important;
+  color: #8ab4f8 !important;
+  border: 1px solid #4285f4 !important;
+}
+
+:root[data-theme="dark"] .search-result-chip:hover {
+  background: #8ab4f8 !important;
+  color: #1a1d22 !important;
+}
+
+/* Search header styling */
+.search-header {
+  background: var(--surface, #ffffff);
+  border-bottom: 1px solid var(--border, #e0e4e7);
+}
+
+:root[data-theme="dark"] .search-header {
+  background: var(--surface, #2d2d2d);
+  border-bottom: 1px solid var(--border, #444);
+}
+
+/* Enhanced toolbar for search results */
+.gmail-select-all-container {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.gmail-bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.gmail-action-btn {
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border, #dadce0);
+  color: var(--text, #5f6368);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.gmail-action-btn:hover {
+  background: var(--hover, #f1f3f4);
+  border-color: var(--accent, #1a73e8);
+  color: var(--accent, #1a73e8);
+}
+
+.gmail-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gmail-selection-count {
+  color: var(--muted, #5f6368);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Dark mode support for toolbar elements */
+:root[data-theme="dark"] .gmail-action-btn {
+  background: var(--surface, #2d2d2d);
+  border-color: var(--border, #444);
+  color: var(--text, #e8eaed);
+}
+
+:root[data-theme="dark"] .gmail-action-btn:hover {
+  background: var(--hover, #3c4043);
+  border-color: var(--accent, #8ab4f8);
+  color: var(--accent, #8ab4f8);
+}
+
+:root[data-theme="dark"] .gmail-selection-count {
+  color: var(--muted, #9aa0a6);
+}
+
+/* Pagination button improvements */
+.gmail-pagination-btn {
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border, #dadce0);
+  color: var(--text, #202124);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.gmail-pagination-btn:hover:not(:disabled) {
+  background: var(--hover, #f1f3f4);
+  border-color: var(--accent, #1a73e8);
+  color: var(--accent, #1a73e8);
+}
+
+.gmail-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--surface, #f8f9fa);
+  color: var(--muted, #5f6368);
+}
+
+.gmail-page-info {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text, #202124);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Dark mode support for pagination */
+:root[data-theme="dark"] .gmail-pagination-btn {
+  background: var(--surface, #2d2d2d);
+  border-color: var(--border, #444);
+  color: var(--text, #e8eaed);
+}
+
+:root[data-theme="dark"] .gmail-pagination-btn:hover:not(:disabled) {
+  background: var(--hover, #3c4043);
+  border-color: var(--accent, #8ab4f8);
+  color: var(--accent, #8ab4f8);
+}
+
+:root[data-theme="dark"] .gmail-pagination-btn:disabled {
+  background: var(--surface, #1a1d22);
+  color: var(--muted, #9aa0a6);
+}
+
+:root[data-theme="dark"] .gmail-page-info {
+  color: var(--text, #e8eaed);
+}
+
+/* Ensure consistent spacing for search results */
+.gmail-mail-list-container .gmail-mail-list .gmail-mail-item {
+  margin: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.gmail-mail-list-container .gmail-mail-list .gmail-mail-item:last-child {
+  border-bottom: none;
+}
+
+/* RTL support for search results */
+[dir="rtl"] .gmail-mail-checkbox {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+[dir="rtl"] .gmail-mail-star {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+[dir="rtl"] .gmail-mail-sender {
+  padding-right: 0;
+  padding-left: 12px;
+}
+
+[dir="rtl"] .gmail-mail-labels {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+[dir="rtl"] .gmail-toolbar-left {
+  order: 2;
+}
+
+[dir="rtl"] .gmail-toolbar-right {
+  order: 1;
+}
+
+[dir="rtl"] .gmail-bulk-actions {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+/* Enhanced focus states for accessibility */
+.gmail-mail-item:focus-within {
+  outline: 2px solid var(--accent, #1a73e8);
+  outline-offset: -2px;
+}
+
+.gmail-mail-checkbox div:focus,
+.gmail-mail-star:focus {
+  outline: 2px solid var(--accent, #1a73e8);
+  outline-offset: 2px;
+}
+
+/* Loading and error states improvements */
+.search-loading-container,
+.search-error-container,
+.search-empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--muted, #5f6368);
+}
+
+.search-empty-container {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.search-error-container {
+  color: var(--error, #ea4335);
+}
+
+/* Mobile responsiveness for search results */
+@media (max-width: 768px) {
+  .gmail-toolbar {
+    padding: 8px 12px;
+  }
+  
+  .gmail-toolbar-left,
+  .gmail-toolbar-right {
+    gap: 4px;
+  }
+  
+  .gmail-pagination {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .gmail-results-info,
+  .gmail-page-info {
+    font-size: 12px;
+  }
+  
+  .gmail-pagination-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .search-header {
+    padding: 12px 16px;
+  }
+  
+  .search-header h1 {
+    font-size: 18px;
+  }
+}
+
+/* Smooth animations for search results */
+.gmail-mail-item {
+  transition: all 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.gmail-mail-item:hover {
+  transform: translateX(2px);
+}
+
+[dir="rtl"] .gmail-mail-item:hover {
+  transform: translateX(-2px);
+}

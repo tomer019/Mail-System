@@ -1,0 +1,4 @@
+www.google.com
+www.B.com
+http://www.bad.com/
+http://www.bad.com/

@@ -1,0 +1,128 @@
+/* src/styles/theme.css */
+/* ---------------------------------------------
+   Theme tokens + Gmail-like light/dark palettes
+   Added for Dark Mode support across the app
+   --------------------------------------------- */
+
+/* Light theme (default) – Gmail-like */
+:root { /* Added for Dark Mode: light palette tokens */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --sidebar-bg: #f1f3f4;
+  --topbar-bg: #f5f5f5;
+  --text: #202124;
+  --muted: #5f6368;
+  --border: #dadce0;
+  --hover: #e8f0fe;
+  --accent: #1a73e8;
+  --accent-weak: #d2e3fc;
+  --on-accent: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #d0d7de;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-border: #c7c7c7;
+  --shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+/* Dark theme – Gmail-like */
+[data-theme="dark"] { /* Added for Dark Mode: dark palette tokens */
+  --bg: #0b0f14;           /* page background */
+  --surface: #12161c;      /* cards/menus */
+  --sidebar-bg: #0f1318;
+  --topbar-bg: #0f1318;
+  --text: #e3e6ea;
+  --muted: #a6acb2;
+  --border: #222830;
+  --hover: #1b2632;
+  --accent: #8ab4f8;       /* Gmail dark accent */
+  --accent-weak: #1a2b3c;
+  --on-accent: #0b0f14;
+  --input-bg: #12161c;
+  --input-border: #2a323b;
+  --btn-secondary-bg: #12161c;
+  --btn-secondary-border: #2a323b;
+  --shadow: 0 8px 20px rgba(0,0,0,.5);
+}
+
+/* Base surfaces – non-breaking (only colors) */
+html, body { /* Added for Dark Mode: apply tokens globally */
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ------- Safe overrides so you don't refactor existing CSS -------
+   These adapt fixed-color components to the tokens (Gmail-like).
+   Remove gradually once all files use tokens directly.
+-------------------------------------------------------------------*/
+
+/* Top bar */
+.topbar { /* Added for Dark Mode: use tokens instead of hard-coded colors */
+  background-color: var(--topbar-bg) !important;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+
+/* Sidebar */
+.sidebar { /* Added for Dark Mode: adapt sidebar */
+  background-color: var(--sidebar-bg) !important;
+  border-right-color: var(--border) !important;
+  color: var(--text) !important;
+}
+.sidebar a { color: var(--text) !important; }
+.sidebar a.active,
+.sidebar a:hover {
+  background-color: var(--accent-weak) !important;
+  color: var(--accent) !important;
+}
+
+/* Common content areas */
+.main-content,
+.route-scroll,
+.mail-view {
+  background: var(--surface) !important;   /* Added for Dark Mode */
+  color: var(--text) !important;           /* Added for Dark Mode */
+  border-color: var(--border) !important;  /* Added for Dark Mode */
+}
+
+/* Mail items - FIX: remove the white background override */
+.mail-item {
+  background: var(--surface) !important;   /* Changed: use surface token instead of white */
+  color: var(--text) !important;           /* Added for Dark Mode */
+  border-color: var(--border) !important;  /* Added for Dark Mode */
+}
+.mail-item:hover { background: var(--hover) !important; }         /* Added for Dark Mode */
+.mail-meta, .mail-preview { color: var(--muted) !important; }     /* Added for Dark Mode */
+
+/* Inputs & buttons */
+input, textarea, select, button { color: var(--text); }           /* Added for Dark Mode */
+input, textarea, select {
+  background: var(--input-bg) !important;                         /* Added for Dark Mode */
+  border: 1px solid var(--input-border) !important;               /* Added for Dark Mode */
+}
+button {
+  background: var(--btn-secondary-bg) !important;                 /* Added for Dark Mode */
+  border: 1px solid var(--btn-secondary-border) !important;       /* Added for Dark Mode */
+  color: var(--text) !important;                                  /* Added for Dark Mode */
+}
+
+/* Accent-style buttons (e.g., Compose / Create Label) */
+.new-mail button,
+.new-label-form button {
+  background: var(--accent) !important;     /* Added for Dark Mode: accent */
+  color: var(--on-accent) !important;       /* Added for Dark Mode: contrast */
+  border: none !important;
+}
+.new-mail button:hover,
+.new-label-form button:hover {
+  filter: brightness(1.05);                  /* Added for Dark Mode: hover effect */
+}
+
+/* Small menus/popovers */
+.label-menu {
+  background: var(--surface) !important;     /* Added for Dark Mode */
+  color: var(--text) !important;             /* Added for Dark Mode */
+  border: 1px solid var(--border) !important;/* Added for Dark Mode */
+  box-shadow: var(--shadow) !important;      /* Added for Dark Mode */
+}
+.label-menu button:hover { background: var(--hover) !important; } 
+

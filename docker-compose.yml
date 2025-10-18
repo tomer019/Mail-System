@@ -1,0 +1,54 @@
+services:
+  # C++ blacklist TCP server (port 5555)
+  blacklist-server:
+    build:
+      context: .
+      dockerfile: src/cpp_server/Dockerfile
+    container_name: blacklist-server
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./data:/usr/src/app/data
+
+  # Node.js mail API server (port 3000)
+  mail-server:
+    build:
+      context: .
+      dockerfile: src/node_server/Dockerfile
+    container_name: mail-server
+    environment:
+      - NODE_ENV=production
+      # That's how the mail server connects to the blacklist server in the same Docker Compose network
+      - BLACKLIST_HOST=blacklist-server
+      - BLACKLIST_PORT=5555
+    ports:
+      - "3000:3000"
+    depends_on:
+      - blacklist-server
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3000/api/health"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+
+  # React client
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: mail-client
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - DANGEROUSLY_DISABLE_HOST_CHECK=true
+      - WDS_SOCKET_HOST=localhost
+      - WDS_SOCKET_PORT=3001
+    depends_on:
+      mail-server:
+        condition: service_healthy
+    restart: unless-stopped

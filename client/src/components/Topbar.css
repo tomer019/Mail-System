@@ -1,0 +1,69 @@
+/* src/components/Topbar.css */
+
+/* Dark Mode note:
+   Converted fixed colors to CSS variables so the theme can switch via [data-theme].
+   Variables are defined in App.css (:root and [data-theme="dark"]). */
+
+.topbar {
+    position: sticky; /* Added by Meir for sticky topbar */
+    top: 0; /* Added by Meir for sticky topbar */
+    z-index: 998; /* Added by Meir for sticky topbar */
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--topbar-bg); /* Dark Mode: use token instead of fixed color */
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--border); /* Dark Mode: use token */
+}
+
+.search-bar {
+  padding: 0.5rem;
+  width: 300px;
+  background: var(--input-bg);   /* Dark Mode: use token */
+  color: var(--text);            /* Dark Mode: use token */
+  border: 1px solid var(--input-border); /* Dark Mode: use token */
+  border-radius: 8px;            /* keeps existing look */
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  font-weight: bold;
+  color: var(--text); /* Dark Mode: use token */
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border); /* Dark Mode: use token */
+}
+
+.logout-button {
+  background-color: var(--btn-secondary-bg);   /* Dark Mode: use token */
+  border: 1px solid var(--btn-secondary-border); /* Dark Mode: use token */
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  color: var(--text); /* Dark Mode: use token */
+  border-radius: 8px;
+}
+
+/* Added for Dark Mode: theme toggle button style */
+.theme-toggle {
+  background: var(--btn-secondary-bg);          /* Dark Mode: use token */
+  border: 1px solid var(--btn-secondary-border);/* Dark Mode: use token */
+  color: var(--text);                           /* Dark Mode: use token */
+  width: 36px;
+  height: 32px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.theme-toggle:hover { filter: brightness(1.05); } /* Added for Dark Mode: simple hover consistent in both themes */

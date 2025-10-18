@@ -1,0 +1,24 @@
+.loading-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 30vh;
+  padding: 24px 12px;
+  color: #174ea6;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.loading-icon {
+  font-size: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 
+  to { transform: rotate(360deg); } 
+}
+.loading-text {
+  font-size: 20px;
+  line-height: 1.5;
+}

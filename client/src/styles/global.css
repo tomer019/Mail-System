@@ -1,0 +1,52 @@
+/* 
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+/* 
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1669c1;
+}
+
+
+a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+}
+*/
