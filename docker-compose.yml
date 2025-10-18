@@ -1,0 +1,20 @@
+services:
+  blacklist-server:
+    build:
+      context: .
+      dockerfile: src/cpp_server/Dockerfile
+    container_name: blacklist-server
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./data:/usr/src/app/data
+
+  mail-server:
+    build:
+      context: .
+      dockerfile: src/node_server/Dockerfile
+    container_name: mail-server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - blacklist-server
