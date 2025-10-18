@@ -1,0 +1,12 @@
+FROM node:20
+
+WORKDIR /app
+COPY src/node_server/package*.json ./
+RUN npm install
+
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+COPY src/node_server .
+
+EXPOSE 3000
+CMD ["node", "app.js"]
